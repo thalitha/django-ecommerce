@@ -1,4 +1,4 @@
-command to create the virtual env
+command to create the virtual env \r
 python -m venv  ./venv
 
 command to install the dependencies of the project
