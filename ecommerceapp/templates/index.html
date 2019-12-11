@@ -1,30 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>::: Ecommerce :::</title>
-</head>
-<body>
-    <h1>Ecommerce</h1>
-    <h2>Welcome to our web site</h2>
+{% extends 'base.html' %}
+{% load static %}
 
-    <table>
-        <thead>
-                <tr>
-                    <th> Name </th>
-                    <th> Description </th>
-                    <th> Price </th>
-                </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>TV</td>
-                <td>70" good tv</td>
-                <td>1500</td>
-            </tr>
-        </tbody>
-    </table>
-</body>
-</html>
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <!-- Single Best Receipe Area -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="single-best-receipe-area mb-30">
+                <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="">
+                <div class="receipe-content">
+                    <a href="{% url 'product' %}">
+                        <h5>Nome da receita</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Best Receipe Area -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="single-best-receipe-area mb-30">
+                <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="">
+                <div class="receipe-content">
+                    <a href="{% url 'product' %}">
+                        <h5>Nome da receita</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Best Receipe Area -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="single-best-receipe-area mb-30">
+                <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="">
+                <div class="receipe-content">
+                    <a href="{% url 'product' %}">
+                        <h5>Nome da receita</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Best Receipe Area -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="single-best-receipe-area mb-30">
+                <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="">
+                <div class="receipe-content">
+                    <a href="{% url 'product' %}">
+                        <h5>Nome da receita</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Best Receipe Area -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="single-best-receipe-area mb-30">
+                <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="">
+                <div class="receipe-content">
+                    <a href="{% url 'product' %}">
+                        <h5>Nome da receita</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Best Receipe Area -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="single-best-receipe-area mb-30">
+                <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="">
+                <div class="receipe-content">
+                    <a href="{% url 'product' %}">
+                        <h5>Nome da receita</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
