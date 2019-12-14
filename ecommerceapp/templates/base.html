@@ -36,8 +36,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <form action="#" method="post">
-                        <input type="search" name="search" placeholder="What are you looking for?...">
+                    <form action="{% url 'search' %}">
+                        <input type="text" name="search" placeholder="What are you looking for?...">
                         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </form>
                 </div>

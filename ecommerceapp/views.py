@@ -16,3 +16,15 @@ def product(request, product_id):
         'product': product
     }
     return render(request,'product.html',product_return)
+
+def search(request):
+
+    if 'search' in request.GET:
+        filterSearch = request.GET['search']
+
+    products = Product.objects.filter(name__icontains=filterSearch, published=True)
+
+    data = {
+        "products":products
+    }
+    return render(request,'search.html', data)
