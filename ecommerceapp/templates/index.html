@@ -11,10 +11,10 @@
             <div class="col-12 col-sm-6 col-lg-4" style="text-align: center;">
                 <div class="single-best-receipe-area mb-30">
                     <a href="{% url 'product' product.id %}">
-                        {% if product.image == null %}
-                            <img src="{% static 'img/default.png' %}" alt="">
+                        {% if product.image == '' %}
+                            <img src="{% static 'img/default.png' %}" style="width: 50%; height: 50%;" alt="">
                         {% else %}
-                            <img src="{{ product.image.url }}" alt="">
+                            <img src="{{ product.image.url }}" style="width: 50%; height: 50%;" alt="">
                         {% endif %}
                     </a>
                     <div class="receipe-content">
