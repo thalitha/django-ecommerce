@@ -1,13 +1,10 @@
 from django.shortcuts import render, redirect, get_list_or_404, get_object_or_404
 from .models import Product
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import logout, authenticate, login as dj_login
+from django.contrib.auth import logout as dj_logout, authenticate, login as dj_login
 
 # Create your views here.
 def index(request):
-    # username = None
-    # if request.user.is_authenticated():
-    #     username = request.user.username
 
     products = Product.objects.order_by('-created_date').filter(published=True)
 
@@ -55,18 +52,16 @@ def register(request):
 
 
 def login(request):
-    # form = UserCreationForm
     if request.method == "POST":
-        # form = UserCreationForm(request.POST)
-        # if form.is_valid():
         username = request.POST.get('username', '')
         password = request.POST.get('password', '')
-        user = authenticate(username)
+        user = authenticate(username=username, password=password)
         dj_login(request, user)
         return redirect("index")
-        # else:
-        #     for msg in form.error_messages:
-        #         print(form.error_messages[msg])
-        #     return render(request, template_name = "login.html",  context={"form":form})
 
     return render(request, template_name = "login.html")
+
+def logout(request):
+    dj_logout(request)
+    return redirect("index")
+

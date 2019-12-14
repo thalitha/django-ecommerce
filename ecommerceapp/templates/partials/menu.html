@@ -62,7 +62,8 @@
                                                 <li><a href="{% url 'login' %}">Login</a></li>
                                             {% else %}
                                                 <li><a href="{% url 'login' %}">My Orders</a></li>
-                                                <li><a href="{% url 'login' %}">Logout</a></li>
+                                                <li><a href="{% url 'logout' %}">Logout</a></li>
+                                                <li>Hi {{user.username}}, Welcome to Older Currency!</li>
                                             {% endif %}
                                         </ul>                         <!-- Formulario de busca -->
                                     <div class="search-btn">
