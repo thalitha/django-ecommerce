@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'******',
-        'USER':'******',
-        'PASSWORD':'******',
-        'HOST':'******'
+        'NAME':'old_currency',
+        'USER':'postgres',
+        'PASSWORD':'123456',
+        'HOST':'localhost'
     }
 }
 
