@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container" style="width: 40%;">
+        <div class="receipe-post-search mb-80">
+                <div class="container">
+                    <h2>Login</h2>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <input type="text" id="username" name="username" placeholder="Username"/>
+                        <input type="password" id="password" name="password" placeholder="Password"/>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <div>{{form.error_messages}}</div>
+                    </form>
+                </div>
+            </div>
+    </div>
+
+
+{% endblock %}

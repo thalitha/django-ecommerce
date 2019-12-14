@@ -55,12 +55,16 @@
 
                                 <!-- Nav Start -->
                                 <div class="classynav">
-                                    <ul>
-                                        <li><a href="{% url 'index' %}">Home</a></li>
-                                        <li><a href="{% url 'register' %}">Register</a></li>
-                                    </ul>
-
-                                    <!-- Formulario de busca -->
+                                        <ul>
+                                            <li><a href="{% url 'index' %}">Home</a></li>
+                                            {% if user.id == None %}
+                                                <li><a href="{% url 'register' %}">Register</a></li>
+                                                <li><a href="{% url 'login' %}">Login</a></li>
+                                            {% else %}
+                                                <li><a href="{% url 'login' %}">My Orders</a></li>
+                                                <li><a href="{% url 'login' %}">Logout</a></li>
+                                            {% endif %}
+                                        </ul>                         <!-- Formulario de busca -->
                                     <div class="search-btn">
                                         <i class="fa fa-search" aria-hidden="true"></i>
                                     </div>
