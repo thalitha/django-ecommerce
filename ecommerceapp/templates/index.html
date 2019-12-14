@@ -5,22 +5,27 @@
 
 <div class="container">
     <div class="row">
-        {% for key, value in product_names.items %}
-        <!-- Single Best Receipe Area -->
-        <div class="col-12 col-sm-6 col-lg-4">
-            <div class="single-best-receipe-area mb-30">
-                <img src="{% static 'img/bg-img/coin.jpg' %}" alt="">
-                <div class="receipe-content">
-                    <a href="{% url 'product' %}">
-                        <h5>{{value}}</h5>
-                    </a>
-                    <div>€62,89</div>
-                    <button type="submit" class="btn delicious-btn">On Sale Now</button>
+        {% if products %}
+            {% for product in products %}
+            <!-- Single Best Receipe Area -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single-best-receipe-area mb-30">
+                    <img src="{{product.image}}" alt="">
+                    <div class="receipe-content">
+                        <a href="{% url 'product' product.id %}">
+                            <h5>{{product.name}}</h5>
+                        </a>
+                        <div>€ {{product.price}}</div>
+                        <a href="{% url 'product' product.id %}" class="btn delicious-btn">
+                            On Sale Now
+                        </a>
+                    </div>
                 </div>
-
             </div>
-        </div>
-        {% endfor %}
+            {% endfor %}
+        {% else %}
+            <div>No items found</div>
+        {% endif %}
     </div>
 </div>
 
