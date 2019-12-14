@@ -11,6 +11,11 @@
                 <div class="col-12 col-md-8">
                     <div class="receipe-headline my-5">
                         <h2>{{product.name}}</h2>
+                        {% if product.image == null %}
+                            <img src="{% static 'img/default.png' %}" alt="">
+                        {% else %}
+                            <img src="{{ product.image.url }}" style="width: 50%; height: 50%;" alt="">
+                        {% endif %}
                         <div class="receipe-duration">
                             <h6>Description:</h6>
                             <p>{{product.description}}</p>

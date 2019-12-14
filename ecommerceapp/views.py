@@ -3,7 +3,7 @@ from .models import Product
 
 # Create your views here.
 def index(request):
-    products = Product.objects.all()
+    products = Product.objects.order_by('-created_date').filter(published=True)
 
     data = {
         "products":products

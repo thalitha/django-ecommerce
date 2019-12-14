@@ -8,9 +8,15 @@
         {% if products %}
             {% for product in products %}
             <!-- Single Best Receipe Area -->
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-12 col-sm-6 col-lg-4" style="text-align: center;">
                 <div class="single-best-receipe-area mb-30">
-                    <img src="{{product.image}}" alt="">
+                    <a href="{% url 'product' product.id %}">
+                        {% if product.image == null %}
+                            <img src="{% static 'img/default.png' %}" alt="">
+                        {% else %}
+                            <img src="{{ product.image.url }}" alt="">
+                        {% endif %}
+                    </a>
                     <div class="receipe-content">
                         <a href="{% url 'product' product.id %}">
                             <h5>{{product.name}}</h5>

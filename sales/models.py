@@ -6,6 +6,8 @@ from datetime import datetime
 class Order(models.Model):
     user_id = models.IntegerField()
     created_date = models.DateTimeField(default=datetime.now, blank=True)
+    def __int__(self):
+        return self.id
 
 class Item(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
