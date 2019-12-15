@@ -65,3 +65,10 @@ def logout(request):
     dj_logout(request)
     return redirect("index")
 
+def order(request, order_product_id):
+    product = get_object_or_404(Product, pk=order_product_id)
+    product_return = {
+        'product': product
+    }
+    return render(request,'order.html',product_return)
+
