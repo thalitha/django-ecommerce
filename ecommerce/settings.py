@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ecommerceapp',
     'sales',
-    'customers'
+    'customers',
+    'payments.apps.PaymentsConfig'
 ]
 
 MIDDLEWARE = [
@@ -132,3 +133,7 @@ STATICFILES_DIRS =[
 # Media
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
+
+#STRIPE
+STRIPE_SECRET_KEY = '<your test secret key here>'
+STRIPE_PUBLISHABLE_KEY = '<your test publishable key here>'
