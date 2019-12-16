@@ -1,4 +1,6 @@
 # Virtual Env
 /venv
 ecommerce/settings.py
-*settings.py
+ecommerce/__pycache__/settings.cpython-38.pyc
+
+
