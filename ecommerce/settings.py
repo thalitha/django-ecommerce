@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':os.environ.get('DATABASE_NAME'),
-        'USER':os.environ.get('DATABASE_USER'),
-        'PASSWORD':os.environ.get('DATABASE_PASSWORD'),
-        'HOST':os.environ.get('DATABAE_HOST')
+        'NAME':config('DATABASE_NAME'),
+        'USER':config('DATABASE_USER'),
+        'PASSWORD':config('DATABASE_PASSWORD'),
+        'HOST':config('DATABAE_HOST')
     }
 }
 
@@ -133,6 +133,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
 
 #STRIPE
-STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
-STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY')
+STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')
+STRIPE_PUBLISHABLE_KEY = config('STRIPE_PUBLISHABLE_KEY')
 
