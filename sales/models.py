@@ -5,7 +5,7 @@ from datetime import datetime
 
 # Create your models here.
 class Order(models.Model):
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    user_id = models.IntegerField()
     created_date = models.DateTimeField(default=datetime.now, blank=True)
     def __int__(self):
         return self.id

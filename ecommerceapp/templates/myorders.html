@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <h2>My Orders</h2>
+    <div class="row">
+        {% if orders %}
+        <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Order Number</th>
+                        <th scope="col">Date</th>                
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in orders %}
+                       <tr>
+                           <td>{{order.id}}</td>
+                           <td>{{order.created_date}}</td>                          
+                       </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <div>No items found</div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
+
+
+

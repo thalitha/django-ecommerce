@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_list_or_404, get_object_or_40
 from .models import Product
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import logout as dj_logout, authenticate, login as dj_login
+from sales.models import Order, Item
 
 # Create your views here.
 def index(request):
@@ -71,4 +72,15 @@ def order(request, order_product_id):
         'product': product
     }
     return render(request,'order.html',product_return)
+
+def myorders(request):
+
+    orders = Order.objects.order_by('-created_date').filter(user_id=request.user.id)
+
+    data = {
+        "orders":orders      
+    }
+    return render(request,'myorders.html', data)
+
+
 
