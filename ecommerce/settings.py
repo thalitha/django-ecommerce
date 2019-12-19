@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':config('DATABASE_NAME'),
-        'USER':config('DATABASE_USER'),
-        'PASSWORD':config('DATABASE_PASSWORD'),
-        'HOST':config('DATABAE_HOST')
+        'NAME':os.environ['DATABASE_NAME'],
+        'USER':os.environ['DATABASE_USER'],
+        'PASSWORD':os.environ['DATABASE_PASSWORD'],
+        'HOST':os.environ['DATABAE_HOST']
     }
 }
 
@@ -134,6 +134,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
 
 #STRIPE
-STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')
-STRIPE_PUBLISHABLE_KEY = config('STRIPE_PUBLISHABLE_KEY')
+STRIPE_SECRET_KEY = os.environ['STRIPE_SECRET_KEY']
+STRIPE_PUBLISHABLE_KEY = os.environ['STRIPE_PUBLISHABLE_KEY']
+
+#STATICFILES_STORAGE
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
 
