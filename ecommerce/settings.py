@@ -13,7 +13,7 @@ DISABLE_COLLECTSTATIC=1
 SECRET_KEY = '$qg(=oi**j^t*&z)mm@i9m!kc$c6!badgo@$l+(5%v6qrw0v+4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get('DEBUG') == 'True'
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'oldcurrencyapp.herokuapp.com']
 
@@ -128,6 +128,7 @@ STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY')
 
 #STATICFILES_STORAGE
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
