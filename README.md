@@ -67,7 +67,7 @@ This website is written in Python and uses Django.
 
 * **Bootstrap**
 * **CSS**  
-* **Github
+* **Github**
 * **Heroku**
 * **HTML5**
 * **JS**
