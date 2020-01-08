@@ -4,14 +4,14 @@ The Old Currency is a ecommerce website where people are able to search about ol
  
 ### UX
 The main aims of the project are as follows:
-1. Be able to see the currency historic but not selling or buying unless that the user register
-2.To allow the user to register and create their own user profile
-It should be intuitive and easy for the user to use.
+1. Be able to see the currency historic but not selling or buying unless that the user register 
+2. To allow the user to register and create their own user profile and see their orders
+3. It should be intuitive and easy for the user to use
 
-USER STORIES:
+***USER STORIES:***
 To understand why people might choose to use this site and therefore provide direction on its creation, I created a number of user stories as follows...
 
-Story 1: As a regular user, I want to be able for searching for currency
+Story 1: As a regular user, I want to be able for searching for currencies
 
 Story 2: As a user, I'd like to see the historic of each currency, image and price
 
@@ -23,90 +23,174 @@ Story e: As a user, I need to be able to pay for the currency that I want to
 
 Although a big undertaking, the website will provide a complete solution for these users
 
-WIREFRAMES - build the designs
-Example 1:
-Initial wireframes are slightly different from the actual design. 
-Landing Page - Logged Users : From the beginning it was thought to have a unique landing page. The initial design is now used to display information for logged users.
-Navigation Bar : This sections was planned to have a design that will differ for logged and non logged users. The actual design has more elements compared to the wireframe, it also displays user avatar and a cart.
-Registration & Authentication
-The following sections are accessible only to registered users
-Add Ticket
-Ticket List
-Ticket Details
-Checkout
-There are also a number of pages that are similar to those mentioned above:
-Form for password recovery. Has similar structure to login/registration form.
-Thank you page. A page that is loaded when a user successfully purchases the App. Contains an image with a link to download the app. This page wasn't initially included in the design. I decided to add it to the checkout process in order to ensure a clear flow.
-
-Example 2: The wireframes (found in the wireframes_and_design_notes folder) provide a good early indication of how I wanted the site to look and feel. The final site has stayed very close to this original design but has been modified to try and make it more user friendly.
-
-After consideration of names, approach and colour schemes I decided to use a green, yellow, blue and black scheme (the green would work well for the football pitches) and I selected the name myTeam after consultation with a number of people in my football group.
-
-The concept of what the site wants to achieve is sound but could become complicated for a user to get used to, therefore at times I broke away from the original wireframe to try and make the operation of the site as user friendly as possible, keeping the UX in mind at all times.
-
-My website will is divided into 6 apps, accounts, groups, matches, profile_and_stats, subscriptions and team_gen.
-
+***WIREFRAMES*** - build the designs and do a web link to access it - as this example did:https://github.com/Code-Institute-Submissions/Django-Milestone-Project-2
 
 ### Features
-draft: The website is designed to be extremely straight forward, there is a general search field in the top-right-corner of the homepage where the user sees a "magnifying glass" and by clicking on that it will display a green big bar on the top of the page which enables the user to type the word (s) for searching. There is no clutter on the homepage, no distractions, its designed so it is not confusing and grabs the user very quickly. So in this search engine, the user can enter words like new zeland, australian, bronze or whatever to find what they are looking for, which will obviously bring up another page with the results. 
+draft: The website is designed to be extremely straight forward, on the very first webpage you can see the old currency title, image and price and by clicking on it you will access the historic about that coin. There is no clutter on the homepage, no distractions, its designed so it is not confusing and grabs the user very quickly. 
+There is a general search field in the top-right-corner of the homepage where the user sees a "magnifying glass" and by clicking on that it will display a green big bar on the top of the page which enables the user to type the word (s) and click for searching on the "magnifying glass". So in this search engine, the user can enter words like new zeland, australian, bronze or whatever to find what they are looking for, which will obviously bring up another page with the results. 
 
-User can buy.... and sell the coins by clicking on...
+* **View of the products**
+* **Search bar** - This allows the user to narrow the search results presented to them by filtering results based on nationality of the coin
+* **User authentication** - Register, Login, Logout - The application contains an Authentication app. This allows the user to login, logout, register with the site.
 
+-Register - user can register by providing email address, username and password in register form. Password needs to be confirmed in extra field. If user tries to register username or email address that already exists in the database an error is displayed. After successful registering user is redirected to the home page.
+-Log in, Log out - user can register by providing email address, username and password in register form. Password needs to be confirmed in extra field. If user tries to register username or email address that already exists in the database an error is displayed. After successful registering user is redirected to the home page.
 
-Top Nav Bar 
-First is the option for the “Cook Book” which just brings you back to the homepage and the main search engine as described above.  Next they will see the “Search by Category” also described above.
-The next Top Nav Bar options are “Big Trends”, “About Us”, “Connect with Us” and “ Recipe Management” which opens a dropdown list which gives a further two options: “Upload your Recipe” and “Edit & Delete a Recipe”.
+* **User Profile**
+* **User Edit Personal details**
+* **Users' can view the contents of their cart by selecting the cart icon**
+The application contains a checkout feature that allows the user to purchase the items they have placed into their cart. This is done by entering their details and using the STRIPE API.
+* **Footer** - Contains linked social icons.
 
-* ***First Page***  
-On the first page, in the middle of the screen there is the general search field where the user should type the keyword of the recipe desired and click on the button “Search”
-* ***Search by Category page***  
-On the Search by Category page the user should flag/select as many categories he/she wants and click on the button “Search” at the bottom. Above the Search button there is a display for the total amount of recipes available which will appear in the next page based on the current fields that are flagged.
-Listed below are the options under each category:
-  - “Dish”: Chicken, Fish, Pasta, Meet and Dessert
-  - “Type of Cuisine”: Italian, French, Thai and Greek
-  - “Type of Diet”: Vegan, Vegetarian, Light and Gluten-Free
-* ***Recipes Resulted from the Search page***
-This page displays the recipes which meets the criteria flagged on the search (whether they were from the General Search or Search by Category). In this page each recipe will be named and will provide a picture. Each recipe clearly has a “See More” option highlighted in blue allowing the user to go in and view, when the user clicks on this they will get all the information required in order to prepare the dish, including time needed, ingredients required, detailed preparation instructions and also a picture of the dish. 
-* ***Big Trends***  
-On the Big Trends page it shows pictures of 3 deluxe dishes (in a carrocel format)
-* ***About Us***  
-On this page the user can find out a little about the company that created the page and it’s purpose. It is on this page that the cooking knives are mentioned and promoted.
-* ***Connect with Us***
-This simply shows that we are on the three major social media channels, Instagram, Facebook, and Twitter. 
-* ***Recipe Management***  
-By clicking on Recipe Management, it will open a dropdown box with the option to go to the pages: “Upload your Recipe” and “Edit & Delete a Recipe”.
-* ***Upload Your Recipe page***  
-Allows the user to upload his/her own recipe. The titles and format is the same as when he/she views any other recipe on the site. They enter the Name of the Recipe, Time required, Ingredients required, Preparation details, and category details.  Upload a Picture and at the end click on the “Send” button. Then the “           Save” button will appear in green.
-* ***Edit & Delete a Recipe page***   
-Will display all recipes available on the website by name and with a picture and will have the options to “Edit” and “Delete” for each. The “Edit” page is essentially the same as the “Upload page” but obviously the text is already populated. 
+* **e-Commerce**
+
+*double check* * **Full CRUD functionality***double check* Upon logging in, the application presents a paginated list of all the issues present in the database with a brief outline of each and a link button to bring the user to the single issue view.
+
  
 ### Future plans include:
-* An option to register, login and log out. 
-* Provide profile information for logged in members with graphics about how many recipes he/she has uploaded (and also a breakdown of them by category), and how the recipes that he/she uploaded have performed (how many likes has received).
-* Provide detailed pages about knives and accessories for sale and provide purchase options.
-* An option for members who upload numerous recipes receive 10% discounts of the knives.
+* An option to review the product bought
+* Another filters for searching such as year of the currency
 
 ### Technologies used
 This website is a Flask Website that uses a Mongo backend.
 
 * **Bootstrap**
-* **CSS**
-* **Flask**
+* **CSS**  
+* **Git & Github
+* **Heroku**
 * **HTML5**
 * **JS**
-* **Mongo**
+* **Postgres**
 * **Python**
+* **Stripe**
 
 ### Testing
+User stories from the UX section were tested to ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+
 All features of the website has been tested and seems to be working well.
 Each functionality has been tested and are described on the Validation documents (pages 01-03).
 The webpage is responsive adapting to different sizes of the devices.
 The www.jshint.com validator coding was used.
+HTML and Css code for this website were validated using W3C Validation Service. No errros were found in the code.
+
+* Example of Testing:
+A form of White Box testing was conducted by the developer using potential use cases or user stories to ensure that each link in the application followed the intended path. This was also done for each feature outlined in the Features section to ensure they were working as intended.
+A form of Black Box testing was done by asking both a friend and the student's mentor on the course to use the application without instruction. Their feedback was then used to make improvements.
+Fundamental testing was used to ensure that the stack of technologies was working together successfully. (e.g.) Retrieving one field from a document in the database, manipulating it with Python, passing it through the Django Full Stack framework and presenting it to the user.
+Component testing was used for each block of code developed to serve a particular function. (e.g.) In lines 191-194 of the "recipe-app-test.py" file, the code block is attempting to filter result by category, placing only recipes with the same category as those selected by the user in the list of results. This was tested with using none, single and multiple categories selected, to ensure it was producing the correct result. Similar testing was used on all code blocks developed/used.
+Combination testing was used to ensure that code blocks were working in conjunction to produce the intended and expected results.
+The responsiveness of the application was tested using various browsers (Chrome, Safari, Internet Explorer, FireFox) and on different devices using the Google Chrome "Inspect" tab.
+Automated tests were developed and conducted using the in-built Django tests package. They can be found in the test_forms.py, test_views.py and test_models.py file of the issues app. 20 tests were developed and conducted on the issues and progress apps. The results of these tests can be seen in the IMAGEFILE.jpg file located in the testing folder. Alternatively, one can run these tests by entering the following command into their own IDE once they have cloned the repository; python3 manage.py test.
  
 ### Deployment
-The webpage was deployed using Github and Heroku. The link to the website is: https://cookbookie.herokuapp.com/.
+
+The webpage was deployed using Github and Heroku. The link to the website is: xxxxx
+**EXAMPLES**
+
+* Example 1: My code has simply been deployed via heroku pages at the following link: yyyy
+My code has simply been deployed via heroku pages at the following link - https://my-team-utility.herokuapp.com/
+
+In order to do this I created a new app on the heroku site and linked to the app via the cloud9 terminal.
+
+I created a Procfile and requirements.txt file which I then pushed to heroku with the main files.
+These tell heroku that this is a web application and what tools in needs to load for the app to run correctly.
+
+All commits have been made to the same master git branch.
+
+A number of config vars are required as follows...
+
+HOSTNAME - The web address of the site - django uses this as a security measure to ensure the page is authorised to be accessed
+
+DATABASE_URL - This is the address of the production postgres database, mine is a heroku addon postgres database
+
+AWS_ACCESS_KEY_ID & AWS_SECRET_ACCESS_KEY - As my static and media files are set up to be held in an S3 bucket, both of these are required.
+
+DISABLE_COLLECTSTATIC - This should be set to 1 to prevent any static and media files being uploaded to heroku on each git push as they are hosted on AWS
+
+EMAIL_ADDRESS & EMAIL_PASSWORD - As emails are sent via the site, a gmail address and password is required with less secure apps access
+
+SECRET_KEY - This is the key that django uses to verify the site
+
+STRIPE_PUBLISHABLE_KEY & STRIPE_SECRET_KEY - These are required by stripe for a user to make payments via checkout.html
+
+Other notes:
+
+Newly created super users must create a profile in django admin after being added via terminal or profile page will not display, a profile per user is required...
+Upon creating a user, the site will create a profile for that user via the UserProfileData model within the profile_and_stats app. However, when initially creating a superuser for django, a profile will not be created. Therefore, in order for the site to work for a superuser, they must manually add a profile via the django admin page and link it to their account using the many to many field. If this is not completed, the superuser will not be able to access their profile page as the record will not be found.
+
+I have added version numbers to the css and js tags within base.html. These must be updated before every commit to ensure users get the most up to date styling and js logic files on their next visit.
+In addition, I have added notes to a setting in settings.py to enable a developer to refresh there css and js files without having to collect static on every occasion to see any changes.
+
+If a developer wants to push their static and media files to AWS, they must run the collectstatic command in the terminal with the following setting...
+
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+
+However, if you wish to refresh your development site without having to collectstatic, the settings should be as follows...
+
+if development == False:
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+
+Collecting static with these settings will result in a folder being created in the root directory containing all of those files. Should this happen, the stray folder can be deleted without consequence.
+
+*Example 2
+To push this app to GitHub repository, the following actions were taken:
+Installing git and creating a GitHub account.
+Initializing a git repository in the root of the app folder, by running the git init command.
+Creating a new repository on GitHub:
+logging in and going to the GitHub home page. Clicking '+ New repository' button,
+typing name of the repo and providing a brief description,
+pressing the 'Create repository' button to make new repo,
+following the '....or push an existing repository from the command line' section.
+Adding, committing and pushing changes to GitHub repository.
+Deploying to heroku took following steps:
+Developing app and pushing it to GitHub.
+Installing gunicorn, a package for django, used to run app on the server.
+pip install gunicorn  
+Installing psycopg2, to run PostgreSQL, because is easy to setup on Heroku, instead of MySql or Sqlite.
+pip install psycopg2  
+Installing dj_database_url, a package used to add database to django.
+pip install dj_database_url  
+Creating a requirements.txt file. That file contains all required packages to run the application.
+pip freeze > requirements.txt
+Creating a Procfile. Procfile is a mechanism for declaring what commands are run by application’s dynos on the Heroku platform. Procfile contains:
+echo web: gunicorn issuetracker.wsgi:application > Procfile
+Pushing changes on Github.
+Creating an App on Heroku(before creating an app make sure your GitHub account is connected with Heroku Account):
+click on Create new app an Heroku website
+type app name and choose region
+click create app button.
+Adding PostgreSQL database.
+heroku addons:create heroku-postgresql:hobby-dev
+Creating config variables:
+on Heroku app go to settings
+click Reveal Vars
+set EMAIL_PASSWORD, EMAIL_ADRESS, SECRET_KEY, STRIPE_PUBLISHABLE_KEY, STRIPE_SECRET_KEY, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY and HOSTNAME.
+Deploying the app on Heroku:
+open your Heroku app and go to deploy option
+select the deployment method as Github,
+search your repository with a name and click connect
+app started to deploy on Heroku, wait for some time
+after the successful message popup, app can be view using URL delivered by Heroku. Live version of this app can be found here.
+To clone this repository and run the app locally following steps are needed:
+On GitHub, navigate to the main page of the repository.
+Under the repository name, click Clone or download.
+In the Clone with HTTPs section, click an copy icon to copy the clone URL for the repository.
+Open Git Bash and change the current working directory to the location where you want the cloned directory to be made.
+Type git clone, and then paste the URL you copied in Step 2.
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+Press Enter. Your local clone will be created.
+Install requirements
+pip install -r requirements.txt
+Set the environmental variables:
+create file env.py in the main folder of the app
+set variables for EMAIL_PASSWORD, EMAIL_ADRESS, SECRET_KEY, STRIPE_PUBLISHABLE_KEY, STRIPE_SECRET_KEY, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY and HOSTNAME
+Start the app
+python manage.py runserver
+and go to http://127.0.0.1:8000/
 
 ### Credits
+*Update this part*
+
 * I have seen the website and used some ideias from: Spencer https://github.com/5pence/recipeGlut and MiroslavSvec https://github.com/Code-Institute-Submissions/project-5
 * Content for Recipes from the BBC website: https://www.bbc.co.uk/food/recipes
 * For text correction: https://www.grammarly.com/grammar-check
