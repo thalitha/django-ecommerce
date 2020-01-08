@@ -8,7 +8,7 @@ The main aims of the project are as follows:
 2. To allow the user to register and have their own user profile and see their orders
 3. It should be intuitive and easy for the user to use
 
-* **User Stories:* **
+* **User Stories:**
 To understand why people might choose to use this site and therefore provide direction on its creation, I created a number of user stories as follows...
 
 Story 1: As a regular user, I want to be able for searching for currencies
@@ -23,7 +23,7 @@ Story e: As a user, I need to be able to pay for the currency that I am buying
 
 The website will provide a complete solution for these users
 
-* **Wireframes* **
+* **Wireframes**
 Build the designs and do a web link to access it - as this example did:https://github.com/Code-Institute-Submissions/Django-Milestone-Project-2
 
 ### Features
