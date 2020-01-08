@@ -8,7 +8,7 @@ The main aims of the project are as follows:
 2. To allow the user to register and have their own user profile and see their orders
 3. It should be intuitive and easy for the user to use
 
-***USER STORIES:***
+* **User Stories:* **
 To understand why people might choose to use this site and therefore provide direction on its creation, I created a number of user stories as follows...
 
 Story 1: As a regular user, I want to be able for searching for currencies
@@ -23,7 +23,8 @@ Story e: As a user, I need to be able to pay for the currency that I am buying
 
 The website will provide a complete solution for these users
 
-***WIREFRAMES*** - build the designs and do a web link to access it - as this example did:https://github.com/Code-Institute-Submissions/Django-Milestone-Project-2
+* **Wireframes* **
+Build the designs and do a web link to access it - as this example did:https://github.com/Code-Institute-Submissions/Django-Milestone-Project-2
 
 ### Features
 * **View of the products** - The website is designed to be extremely straight forward, on the very first webpage you can see the old currency titles, images and their price and by clicking on the title you will access the historic about it. There is no clutter on the homepage, no distractions, its designed so it is not confusing and grabs the user very quickly. 
@@ -32,9 +33,9 @@ The website will provide a complete solution for these users
 
 * **User authentication** - Register, Login, Logout - The application contains an Authentication app. This allows the user to login, logout, register with the site.
 
--Register - user can register by providing username and password in register form. Password needs to be confirmed in extra field. The password can’t be too similar to their other personal information, it must contain at least 8 characters, it can’t be a commonly used password and it can’t be entirely numeric; otherwise the website won't allow the user to register. After successful registering user is redirected to the home page which will have the message: "Hi (user name created), Welcome to Older Currency!"
+***Register*** - user can register by providing username and password in register form. Password needs to be confirmed in extra field. The password can’t be too similar to their other personal information, it must contain at least 8 characters, it can’t be a commonly used password and it can’t be entirely numeric; otherwise the website won't allow the user to register. After successful registering user is redirected to the home page which will have the message: "Hi (user name created), Welcome to Older Currency!"
 
--Log in, Log out - user can register by providing username and password in register form. After successful registering user is redirected to the home page.
+***Log in, Log out*** - user can register by providing username and password in register form. After successful registering user is redirected to the home page.
 
 * **User Profile - My Orders** After logging the user will be able to se the button "My orders" on the top and by clicking on it will access their orders.
 
