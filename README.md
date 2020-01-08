@@ -90,7 +90,7 @@ After the Download or Clone of the project, you should create an Virtual Environ
 ```bash
 python -m venv  ./venv
 ```
-## Installation of Dependencies
+***Installation of Dependencies***
 
 Now we have our Virtual Environment ready, we have to install the dependencies of our project.
 
@@ -99,14 +99,14 @@ Command to install all dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-## Setup the Server
+***Setup the Server***
 You can setup the server using the command below:
 
 ```bash
 python manage.py runserver     
 
 ```
-## Run the Migrations
+***Run the Migrations***
 
 We will have to connect to the Database, to do it, we can run some command line to help us to create everything in our database such as Table, Indices, Constraints and Relationship between tables.  
 
