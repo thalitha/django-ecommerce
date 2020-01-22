@@ -129,119 +129,14 @@ python manage.py createsuperuser
 ```
 Now you should be able to access the Old Currency Admin.
 
-**EXAMPLES**
-
-* Example 1: My code has simply been deployed via heroku pages at the following link: yyyy
-My code has simply been deployed via heroku pages at the following link - https://my-team-utility.herokuapp.com/
-
-In order to do this I created a new app on the heroku site and linked to the app via the cloud9 terminal.
-
-I created a Procfile and requirements.txt file which I then pushed to heroku with the main files.
-These tell heroku that this is a web application and what tools in needs to load for the app to run correctly.
-
-All commits have been made to the same master git branch.
-
-A number of config vars are required as follows...
-
-HOSTNAME - The web address of the site - django uses this as a security measure to ensure the page is authorised to be accessed
-
-DATABASE_URL - This is the address of the production postgres database, mine is a heroku addon postgres database
-
-AWS_ACCESS_KEY_ID & AWS_SECRET_ACCESS_KEY - As my static and media files are set up to be held in an S3 bucket, both of these are required.
-
-DISABLE_COLLECTSTATIC - This should be set to 1 to prevent any static and media files being uploaded to heroku on each git push as they are hosted on AWS
-
-EMAIL_ADDRESS & EMAIL_PASSWORD - As emails are sent via the site, a gmail address and password is required with less secure apps access
-
-SECRET_KEY - This is the key that django uses to verify the site
-
-STRIPE_PUBLISHABLE_KEY & STRIPE_SECRET_KEY - These are required by stripe for a user to make payments via checkout.html
-
-Other notes:
-
-Newly created super users must create a profile in django admin after being added via terminal or profile page will not display, a profile per user is required...
-Upon creating a user, the site will create a profile for that user via the UserProfileData model within the profile_and_stats app. However, when initially creating a superuser for django, a profile will not be created. Therefore, in order for the site to work for a superuser, they must manually add a profile via the django admin page and link it to their account using the many to many field. If this is not completed, the superuser will not be able to access their profile page as the record will not be found.
-
-I have added version numbers to the css and js tags within base.html. These must be updated before every commit to ensure users get the most up to date styling and js logic files on their next visit.
-In addition, I have added notes to a setting in settings.py to enable a developer to refresh there css and js files without having to collect static on every occasion to see any changes.
-
-If a developer wants to push their static and media files to AWS, they must run the collectstatic command in the terminal with the following setting...
-
-STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-
-However, if you wish to refresh your development site without having to collectstatic, the settings should be as follows...
-
-if development == False:
-STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-
-Collecting static with these settings will result in a folder being created in the root directory containing all of those files. Should this happen, the stray folder can be deleted without consequence.
-
-*Example 2
-To push this app to GitHub repository, the following actions were taken:
-Installing git and creating a GitHub account.
-Initializing a git repository in the root of the app folder, by running the git init command.
-Creating a new repository on GitHub:
-logging in and going to the GitHub home page. Clicking '+ New repository' button,
-typing name of the repo and providing a brief description,
-pressing the 'Create repository' button to make new repo,
-following the '....or push an existing repository from the command line' section.
-Adding, committing and pushing changes to GitHub repository.
-Deploying to heroku took following steps:
-Developing app and pushing it to GitHub.
-Installing gunicorn, a package for django, used to run app on the server.
-pip install gunicorn  
-Installing psycopg2, to run PostgreSQL, because is easy to setup on Heroku, instead of MySql or Sqlite.
-pip install psycopg2  
-Installing dj_database_url, a package used to add database to django.
-pip install dj_database_url  
-Creating a requirements.txt file. That file contains all required packages to run the application.
-pip freeze > requirements.txt
-Creating a Procfile. Procfile is a mechanism for declaring what commands are run by application’s dynos on the Heroku platform. Procfile contains:
-echo web: gunicorn issuetracker.wsgi:application > Procfile
-Pushing changes on Github.
-Creating an App on Heroku(before creating an app make sure your GitHub account is connected with Heroku Account):
-click on Create new app an Heroku website
-type app name and choose region
-click create app button.
-Adding PostgreSQL database.
-heroku addons:create heroku-postgresql:hobby-dev
-Creating config variables:
-on Heroku app go to settings
-click Reveal Vars
-set EMAIL_PASSWORD, EMAIL_ADRESS, SECRET_KEY, STRIPE_PUBLISHABLE_KEY, STRIPE_SECRET_KEY, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY and HOSTNAME.
-Deploying the app on Heroku:
-open your Heroku app and go to deploy option
-select the deployment method as Github,
-search your repository with a name and click connect
-app started to deploy on Heroku, wait for some time
-after the successful message popup, app can be view using URL delivered by Heroku. Live version of this app can be found here.
-To clone this repository and run the app locally following steps are needed:
-On GitHub, navigate to the main page of the repository.
-Under the repository name, click Clone or download.
-In the Clone with HTTPs section, click an copy icon to copy the clone URL for the repository.
-Open Git Bash and change the current working directory to the location where you want the cloned directory to be made.
-Type git clone, and then paste the URL you copied in Step 2.
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-Press Enter. Your local clone will be created.
-Install requirements
-pip install -r requirements.txt
-Set the environmental variables:
-create file env.py in the main folder of the app
-set variables for EMAIL_PASSWORD, EMAIL_ADRESS, SECRET_KEY, STRIPE_PUBLISHABLE_KEY, STRIPE_SECRET_KEY, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY and HOSTNAME
-Start the app
-python manage.py runserver
-and go to http://127.0.0.1:8000/
-
 ### Credits
 *Update this part*
 
-* I have seen the website and used some ideias from: Spencer https://github.com/5pence/recipeGlut and MiroslavSvec https://github.com/Code-Institute-Submissions/project-5
 * Content for Recipes from the BBC website: https://www.bbc.co.uk/food/recipes
 * For text correction: https://www.grammarly.com/grammar-check
 * For pictures: https://www.istockphoto.com/ie and https://www.bbc.co.uk/food/recipes
-* For dropzone http://www.dropzonejs.com (Matias Meno)
 * For validation: www.jshint.com
-License: [MIT](https://choosealicense.com/licenses/mit/)
+
 
 
 
