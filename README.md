@@ -24,7 +24,7 @@ Story e: As a user, I need to be able to pay for the currency that I am buying
 The website will provide a complete solution for these users
 
 * **Wireframes**
-Build the designs and do a web link to access it - as this example did:https://github.com/Code-Institute-Submissions/Django-Milestone-Project-2
+Upload the picture with the designs UX.
 
 ### Features
 * **View of the products** - The website is designed to be extremely straight forward, on the very first webpage you can see the old currency titles, images and their price and by clicking on the title you will access the historic about it. There is no clutter on the homepage, no distractions, its designed so it is not confusing and grabs the user very quickly. 
@@ -77,14 +77,13 @@ This website is written in Python and uses Django.
 
 ### Testing
 User stories from the UX section were tested to ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals and seems to be working well.
-Each functionality has been tested and are described on the Validation documents (pages 01-03).
+Each functionality has been tested and are described on the Validation document.
 The webpage is responsive adapting to different sizes of the devices.
 The www.jshint.com validator coding was used.
 HTML and Css code for this website were validated using W3C Validation Service. No errros were found in the code.
 
 ### Deployment
 The webpage was deployed using Github and Heroku. The link to the website is: http://oldcurrencyapp.herokuapp.com/
-
 After the Download or Clone of the project, you should create an Virtual Environment to run Old Currency Ecommerce inside the Django Platform .
 
 ```bash
@@ -132,9 +131,9 @@ Now you should be able to access the Old Currency Admin.
 ### Credits
 *Update this part*
 
-* Content for Recipes from the BBC website: https://www.bbc.co.uk/food/recipes
+* Content for the products from the All Coin Values website: https://www.allcoinvalues.com/
+* For pictures (remove the background from the coins pictures): https://www.remove.bg/upload
 * For text correction: https://www.grammarly.com/grammar-check
-* For pictures: https://www.istockphoto.com/ie and https://www.bbc.co.uk/food/recipes
 * For validation: www.jshint.com
 
 
