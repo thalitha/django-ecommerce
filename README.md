@@ -24,7 +24,7 @@ Story e: As a user, I need to be able to easily pay for the currency by card
 The website provides complete solution for the users
 
 * **Wireframes**
-Upload the picture with the designs UX.
+See the Wireframe here: https://github.com/thalitha/django-ecommerce/blob/master/Wireframes.PNG 
 
 ### Features
 * **Product Display** - The website is designed to be extremely straight forward, on the homepage you can see the old currency titles, images and their price. By clicking on the title you will access a story about the history of the currency. There is no clutter on the homepage, no distractions, its designed so it is not confusing and grabs the user very quickly. Within seconds of going into the homepage it is obvious to any user that this website is selling old currency. 
