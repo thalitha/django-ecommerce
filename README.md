@@ -77,7 +77,7 @@ This website is written in Python and uses Django.
 
 ### Testing
 User stories from the UX section were tested to ensure that they all work as it was intended, with the site providing a straightforward way for the users to achieve their goals. It is all working smoothly. 
-Each functionality has been tested and are described in the Validation document.
+Each functionality has been tested and are described in the Test - Validation document (https://github.com/thalitha/django-ecommerce/blob/master/Test%20-%20Validation.pdf)
 The webpage has been tested on different devices and works on all.
 The www.jshint.com validator coding was used.
 HTML and CSS code for this website were validated using W3C Validation Service. No errors were found in the code.
